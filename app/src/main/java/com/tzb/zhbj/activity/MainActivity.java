@@ -1,8 +1,10 @@
-package com.tzb.zhbj;
+package com.tzb.zhbj.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.tzb.zhbj.R;
 
 public class MainActivity extends AppCompatActivity {
 
