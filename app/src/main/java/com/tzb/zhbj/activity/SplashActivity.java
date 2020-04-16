@@ -3,6 +3,7 @@ package com.tzb.zhbj.activity;
 
 import android.animation.StateListAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -51,7 +52,9 @@ public class SplashActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-
+                Intent i = new Intent(getApplicationContext(), GuideActivity.class);
+                startActivity(i);
+                finish();
             }
 
             @Override
