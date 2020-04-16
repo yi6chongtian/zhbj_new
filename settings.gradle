@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':JavaLibDemo', ':AndroidLibDemo', 'SlidingLibrary'
 rootProject.name='zhbj'

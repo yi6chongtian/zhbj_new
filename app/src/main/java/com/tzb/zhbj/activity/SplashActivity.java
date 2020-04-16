@@ -13,6 +13,8 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.tzb.androidlibdemo.AndroidLibUtils;
+import com.tzb.javalib.JavaLibUtilsDemo;
 import com.tzb.zhbj.R;
 
 public class SplashActivity extends Activity {
@@ -24,6 +26,10 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        JavaLibUtilsDemo.test();
+        AndroidLibUtils.test();
+
         mRl = findViewById(R.id.rl_root);
         mIv_horse = findViewById(R.id.iv_horse);
         //动画 旋转 缩放 渐变

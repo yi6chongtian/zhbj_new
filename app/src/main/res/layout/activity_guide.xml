@@ -43,8 +43,11 @@
         android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#fff"
+        android:background="@drawable/selector_startbtn_bg"
+        android:visibility="invisible"
         android:layout_centerHorizontal="true"
+        android:textColor="@drawable/selector_start_btn_textcolor"
+
         android:text="开始体验"/>
 
 </RelativeLayout>

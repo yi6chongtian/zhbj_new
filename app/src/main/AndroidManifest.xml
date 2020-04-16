@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.GuideActivity" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity android:name=".activity.MainActivity"/>
 
     </application>
 

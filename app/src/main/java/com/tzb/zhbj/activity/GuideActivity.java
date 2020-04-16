@@ -5,11 +5,13 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -23,6 +25,8 @@ public class GuideActivity extends Activity {
 
     private ImageView mIvRedPoint;
     private LinearLayout mLlContainer;
+    private Button mStartBtn;
+
 
     private List<ImageView> mImageViewList = new ArrayList<ImageView>();
     private int[] mImgIds = new int[]{
@@ -46,6 +50,15 @@ public class GuideActivity extends Activity {
     private void initUI() {
         mIvRedPoint = findViewById(R.id.iv_red_point);
         mLlContainer = findViewById(R.id.ll_indicator);
+        mStartBtn = findViewById(R.id.bt_start);
+        mStartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void initData() {
@@ -79,7 +92,7 @@ public class GuideActivity extends Activity {
 
             @Override
             public void onPageSelected(int position) {
-
+                mStartBtn.setVisibility(position == mImgIds.length - 1 ? View.VISIBLE : View.INVISIBLE);
             }
 
             @Override
