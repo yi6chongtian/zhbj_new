@@ -17,6 +17,8 @@ import com.tzb.androidlibdemo.AndroidLibUtils;
 import com.tzb.javalib.JavaLibUtilsDemo;
 import com.tzb.zhbj.R;
 
+import org.xutils.x;
+
 public class SplashActivity extends Activity {
 
     private ImageView mIv_horse;

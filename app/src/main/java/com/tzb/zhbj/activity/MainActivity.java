@@ -15,6 +15,10 @@ import com.tzb.zhbj.fragment.LeftFragment;
 
 public class MainActivity extends SlidingFragmentActivity {
 
+    private static final String LeftFragmentTag  = "LeftFragmentTag";
+    private static final String MainFragmentTag  = "MainFragmentTag";
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +32,19 @@ public class MainActivity extends SlidingFragmentActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction =fragmentManager.beginTransaction();
-        transaction.replace(R.id.fl_left, new LeftFragment());
-        transaction.replace(R.id.rl_content, new ContentFragment());
+        transaction.replace(R.id.fl_left, new LeftFragment(), LeftFragmentTag);
+        transaction.replace(R.id.rl_content, new ContentFragment(), MainFragmentTag);
         transaction.commit();
 
+    }
+
+    public LeftFragment getLeftFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        return (LeftFragment) fragmentManager.findFragmentByTag(LeftFragmentTag);
+    }
+
+    public ContentFragment getMainFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        return (ContentFragment) fragmentManager.findFragmentByTag(MainFragmentTag);
     }
 }
